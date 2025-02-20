@@ -12,8 +12,8 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'BharathKT', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
-                        sh "git config user.email devopssameera@gmail.com"
-                        sh "git config user.name Sameera Dissanayaka"
+                        sh "git config user.email bharath2593@gmail.com"
+                        sh "git config user.name bharath"
                         //sh "git switch master"
                         sh "cat deployment.yml"
                         sh "sed -i 's+devopswithsam/jenkins-flask.*+devopswithsam/jenkins-flask:${DOCKERTAG}+g' deployment.yml"
